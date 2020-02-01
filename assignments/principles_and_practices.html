@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Fab Academy</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="../img/favicon.png" rel="icon">
+  <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Raleway:400,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="../vendor/aos/aos.css" rel="stylesheet">
+  <link href="../vendor/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
+
+
+  <!-- =======================================================
+    Template Name: MyPortfolio
+    Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com/
+  ======================================================= -->
+  <style>
+    a {
+      color: blue;
+    }
+    li {
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+  <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+    <div class="container py-2 py-md-5">
+      <div class="row align-items-start">
+        <div class="col-md-2">
+          <ul class="custom-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 d-none d-md-block  mr-auto">
+          <div class="tweet d-flex">
+            <span class="icofont-twitter text-white mt-2 mr-3"></span>
+            <div>
+              <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut
+                  officiis explicabo inventore. <br> <a href="#">t.co/v82jsk</a></em></p>
+            </div>
+          </div>
+        </div>
+        <!--<div class="col-md-4 d-none d-md-block">
+          <h3>Hire Me</h3>
+          <p>Long form explanation of the lesson here, what was learned, etc... <br> <a href="#">myemail@gmail.com</a></p>
+        </div>-->
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Fab Academy.</a>
+
+      <a href="#" class="burger" data-toggle="collapse" data-target="#main-navbar">
+        <span></span>
+      </a>
+
+    </div>
+  </nav>
+
+
+
+  <main id="main">
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-6" data-aos="fade-up">
+
+            <h1>Practices & Principles</h1>
+            <p>Making my website and doing a rough sketch of my final project</p>
+
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="site-section pb-0">
+        <div class="container">
+          <div class="row align-items-stretch">
+            <h3>Making My Website</h3>
+
+          </div>
+          <div class="row align-items-stretch">
+            <ol>
+              <li>Find a good template</li>
+              <p>The first step of the website building process was finding a good website template that was well-formed to the needs of Fab Academy.  Building from scratch was an option but given my lack of design skills and the number of good templates there are that meet the requirements, I quickly eschewed that idea.  Using <a href="https://fabacademy.org/archives/2014/students/diazdeleon.alejandra/">Alejandra's website</a> as my ideal prototype I began my search.</p>
+              <p>After winnowing down my options I decided on <a href="https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/">this template</a>.  I felt it was clean and would minimize the amount of work I'd need to put in to change it.</p>
+              <li>Change images and descriptions</li>
+              <p>
+                The second step of the process was to change the template to my needs.  Not much needed to be done apart from adding new blocks for each week and doing a google search for images that fit the subject of that week.  I also had to write a brief About Me description (the most painstaking part of the process).
+              </p>
+              <li>Setting up authentication with my FabAcademy Gitlab repository</li>
+              <p>The first thing I needed to do to push my changes was be properly authenticated with my designated FabAcademy repository.  This will be two parts:  The way I did it and the way it should've been done! </p>
+              <ul>
+                <li>Method 1: Use username and password as authentication</li>
+                <ol>
+                  <li>Use Forgot Password to set my password</li>
+                  <p>We know our emails are attached to our repositories but we aren't given passwords.  I used the Forgot Password feature to create a password to use when pushing my new code from the command line </p>
+                  <li>Clone the repository with HTTPS</li>
+                  <p>There are two option in cloning a repository: You can clone with SSH or with HTTPS.  Given I intended to use username/password authentication to push code from the command line, I cloned with HTTPS.  Extra info: In an already existing git repository you can see the type of authentication being used by looking in the .git/config file of the root directory.  There it can be seen if the URL for the remote repository begins with HTTPS or SSH. 
+                  As of this writing you can find the two URL options to clone in the top right corner of your Gitlab repo homepage:
+                  <br>
+                  <img src="https://fab-academy-static.s3.us-east-2.amazonaws.com/imgs/gitlab_clone_ss.png" width=300 />
+                  </p>
+                  <li>Clone the repo</li>
+                  <p>To clone your repository to your local machine use the following commands in your terminal (I use a Mac but this will work on any linux machine):<br>
+                    <div >
+                      <pre>
+                        <code class="shell hljs">
+  <span class="hljs-meta">$ </span><span class="bash"><span class="hljs-built_in">cd </span><span class="hljs-variable">directory/of/your/choice</span><span> #This puts you in the directory you'd like your project to be stored</span>
+  </span>
+  <span class="hljs-meta">$ </span><span class="bash"><span class="hljs-built_in">git clone </span><span class="hljs-variable">repository_url</span><span> #clones the repository</span>
+  </span>
+                      </code>
+                    </pre>
+                  </div>
+                  </p>
+                  <li>Now when I run my git commands to push to my Fab Academy repository I will be asked for my username/password</li>
+                </ol>
+                <li>Method 2: Use SSH private/public key authentication</li>
+              </ul>
+              <li id="push_to_repo">Push to repository</li>
+              <p>After you've cloned the repository and have added and edited the files to your liking, you are now ready to push to Gitlab and see your changes on your homepage on the internet.</p>
+              <ol>
+                <li>Tell git which changes to track</li>
+                <p>To keep things simple, use this command from your root directory to add all of the files to your git repository<br>
+                  <pre>
+                    <code class="shell hljs">
+<span class="hljs-meta">$ </span><span class="bash"><span class="hljs-built_in">git add .</span></span>
+                    </code>
+                  </pre>
+                </p>
+                <li>Commit/save the changes made </li>
+                <p>Now that you've "registered" the changes with git above you can now officially add them to your repository with:
+                  <pre>
+                    <code class="shell hljs">
+<span class="hljs-meta">$ </span><span class="bash"><span class="hljs-built_in">git commit -m</span><span class="hljs-variable"> "Message describing what you've changed here"</span></span>
+                    </code>
+                  </pre>
+                  The final part of this command is where you describe changes you've made since your last commit.  Be descriptive here (but don't write a novel) because it can be very useful in tracking where features or bugs were introduced later on.
+                </p>
+                <li>Push to Gitlab and view page</li>
+                <p>Finally you can push your changes to the server
+                  <pre>
+                    <code class="shell hljs">
+<span class="hljs-meta">$ </span><span class="bash"><span class="hljs-built_in">git push origin master</span></span>
+                    </code>
+                  </pre>
+                </p>
+              </ol>
+              <li>Woops, I forgot add the .gitlab_ci.yml file</li>
+              <p>This being my first time using Gitlab I wasn't sure on how the changes you make in your repository get displayed on your webpage.  It turns out you need to add a special file in the root of your directory, <b>.gitlab_ci.yml</b>, to tell Gitlab to make your webpage from what you've pushed.  Depending on the tools you've used (Python, php, html, markdown, etc...) this file will be different.  My site requires no backend code, just html, css, js so this part was simple.  I copied <a href="https://gitlab.com/gitlab-org/gitlab-foss/blob/master/lib/gitlab/ci/templates/Pages/HTML.gitlab-ci.yml">this yml template here</a>, added it to my repository with the commands in <a href="#push_to_repo">this step</a>.  Note: This yml template requires that you have index.html file in the root of your repository</p>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+  </main>
+  
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="mb-1"></p>
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=MyPortfolio
+            -->
+          </div>
+        </div>
+        <!--<div class="col-sm-6 social text-md-right">
+          <a href="#"><span class="icofont-twitter"></span></a>
+          <a href="#"><span class="icofont-facebook"></span></a>
+          <a href="#"><span class="icofont-dribbble"></span></a>
+          <a href="#"><span class="icofont-behance"></span></a>
+        </div>-->
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/jquery/jquery-migrate.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../vendor/easing/easing.min.js"></script>
+  <script src="../vendor/php-email-form/validate.js"></script>
+  <script src="../vendor/isotope/isotope.pkgd.min.js"></script>
+  <script src="../vendor/aos/aos.js"></script>
+  <script src="../vendor/owlcarousel/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
